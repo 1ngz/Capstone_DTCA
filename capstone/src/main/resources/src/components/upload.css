@@ -1,6 +1,34 @@
 
 
-.content{
-    background-color:black;
+.uploadContentBox{
+    width:60%;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: row;
+    height:500px;
 }
+
+.uploadBox{
+    width:50%;
+    border:1px solid black;
+
+
+}
+
+.fileBox{
+    border:1px dotted grey;
+    height:250px;
+}
+
+.업로드설명{
+    height:150px;
+}
+.업로드부가설명{
+    font-size:10pt;
+}
+
+.회색{
+    color:grey;
+}
+
 

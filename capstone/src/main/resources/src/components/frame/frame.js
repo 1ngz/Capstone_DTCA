@@ -7,8 +7,6 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 
-import Login from '../login/login.js';
-
 function 아래화살표(){
   return (
     <img src="iconDown.png"

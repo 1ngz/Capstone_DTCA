@@ -7,10 +7,24 @@ function Upload(){
         <Frame/>
         <Banner name={'데이터 업로드'}/>
         <ContentNav/>
-        <div className='content'>
-                <div>data upload</div>
-                <h3>데이터를 선택하세요 (UI미완성)</h3>
+            <div className='uploadContentBox'>
+                <div className="uploadBox">
+                    <p>파일 업로드 관련 설명</p>
+                    <div className="fileBox">
+                        <img src="icon구름.png" width="100px"/>
+                        <div className="업로드부가설명">파일을 선택하거나 드래그하여 올려주세요</div>
+                        <div className="업로드부가설명 회색">10MB이하의 JPG파일만 업로드 가능</div>
+                        <button>파일 선택</button>
+                    </div>
+                    <div>
+                        <button>제출</button>
+                        <button>취소</button>
+                    </div>
                 </div>
+
+
+                <div className="uploadBox">데이터 업로드 화면</div>
+            </div>
         <Footer/>
         </div>
     );
