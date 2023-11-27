@@ -1,0 +1,41 @@
+#지도박스{
+    height:1200px;
+}
+.지도검색창{
+    width:25%;
+}
+.NaverMaps{
+    width:75%;
+}
+
+#주소검색창{
+    width:250px;
+    height:35px;
+}
+
+#검색버튼{
+    background-color: white;
+    margin: 0;
+    padding: 0 ;
+}
+
+
+#modal{
+    position:absolute;
+}
+
+
+.mapBox{
+    width:100%;
+    height: 130px;
+    font-size:32px;
+    margin: 0 auto;
+    border:1px solid lightgrey;
+    display: grid;
+    place-content: center;
+
+}
+
+.mapTest{
+    padding:0 20px 0 20px;
+}

@@ -1,0 +1,29 @@
+spring:
+
+  h2:
+    console:
+      enabled: true
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/test
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: dbtjsdn5876@@
+
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+        show_sql: true
+
+logging:
+  level:
+    capstone: DEBUG
+
+jwt:
+  header: Authorization
+  secret: sejongUniversityCapnstoneProjectTeamNameringdingdong
+  token-validity-in-seconds: 86400
