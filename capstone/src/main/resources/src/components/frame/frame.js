@@ -32,7 +32,7 @@ function Bars({i}){ //이걸 그냥 nav에 붙는 bars로 사용하면 TopNav에
       menu1 : "공지사항",
       menu2 : "커뮤니티",
       link : "/notice",
-      link2 : "/community",
+      link2 : "/board",
     },{
       name: "데이터 업로드",
       menu1 : "데이터 업로드",

@@ -2,22 +2,19 @@ import './community.css';
 
 import {Frame, Banner, ContentNav, Footer} from '../frame/frame.js';
 
-
-function 게시글({data}){
-    
-
+function 게시글({data}){    
     return (
     <div className='displayRow 게시글'>
         <div>{data.number}</div>
-        <div>{data.subject}</div>
+        <div>
+            <a href='/1'>{data.subject}</a>
+        </div>
         <div>{data.view}</div>
     </div>
-
     );
 }
 
-export default function CommunityMain(){
-    
+export default function CommunityMain({subject}){ 
     const 양식 = {
         number : '글 번호',
         subject : '제목',
@@ -39,18 +36,20 @@ export default function CommunityMain(){
         number:'004',
         subject:'제목입니다 아무말대잔치',
         view:'15'
-    }
-    ]
-
+    },{
+        number:'005',
+        subject:'제목입니다2 아무말대잔치',
+        view:'22'
+    }];
 
     return (
         <div>
             <Frame/>
-            <Banner name={'게시판'}/>
+            <Banner name={subject}/>
             <ContentNav name={'공지사항'}/>
-            
+
             <div className='communityContentBox'>
-                <h1>공지사항</h1>
+                <h1>{subject}</h1>
                     <div>
                         <div className="양식">
                         <게시글 data={양식}/>
@@ -59,6 +58,7 @@ export default function CommunityMain(){
                         <게시글 data={data[1]}/>
                         <게시글 data={data[2]}/>
                         <게시글 data={data[3]}/>
+                        <게시글 data={data[4]}/>
                     </div>
             </div>
 

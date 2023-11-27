@@ -17,19 +17,12 @@ import axios from 'axios';
 
 import {Maps} from './maps.js';
 
-//<Frame/> : navigator:
-//<NewAccount/>
-//<Login/> : login창
+//<Community/> 그거
+//<CommunityMain/> 공지사항 */
 
-
-/*<Introduce/>
-<Login/>
-<NewAccount/>
-<NewAccoutGeneral/>
-<NewAccoutGov/>
-<Community/> 그거
-<CommunityMain/> 공지사항 */
 function App() {
+
+
   const [data, setData] = useState('');
   useEffect(() => {
     // Spring 서버의 엔드포인트에 GET 요청을 보냄
@@ -52,12 +45,11 @@ function App() {
                 <Route path="/intro" element={<Introduce/>}/>
                 <Route path="/login" element={<Login/>}/>
                 <Route path="/newAccount" element={<NewAccount/>}/>
-                <Route path="/notice" element={<CommunityMain/>}/>
-                <Route path="/community" element={<Community/>}/>
+                <Route path="/notice" element={<CommunityMain subject={"공지사항"}/>}/>
+                <Route path="/board" element={<CommunityMain subject={"커뮤니티"}/>}/>
                 <Route path="/newAccountGeneral" element={<NewAccoutGeneral/>}/>
                 <Route path="/newAccountGov" element={<NewAccoutGov/>}/>
                 <Route path="/upload" element={<Upload/>}/>
-                
           </Routes>
         </Router>
         

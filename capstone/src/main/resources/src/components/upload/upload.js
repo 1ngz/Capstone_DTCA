@@ -1,5 +1,5 @@
 import {Frame, Banner, ContentNav, Footer} from '../frame/frame.js';
-import '../upload.css';
+import './upload.css';
 
 
 import React, { useState } from 'react';
@@ -47,7 +47,7 @@ function Upload(){
                 <div className="uploadBox">
                     <p id="업로드설명">파일 업로드 관련 설명</p>
                     <div className="fileBox">
-                        <img src="capstone/src/main/resources/public/icon구름.png"/>
+                        <img src="icon구름.png" width="60px"/>
                         <div className="업로드부가설명">파일을 선택하거나 드래그하여 올려주세요</div>
                         <div className="업로드부가설명 회색">10MB이하의 JPG파일만 업로드 가능</div>
                         <ImageUpload/>
