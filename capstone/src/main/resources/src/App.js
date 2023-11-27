@@ -28,17 +28,19 @@ import {Maps} from './maps.js';
 <Community/> 그거
 <CommunityMain/> 공지사항 */
 function App() {
-
-
-  /*
+  const [data, setData] = useState('');
   useEffect(() => {
-      // Spring Boot 서버의 API endpoint로 데이터를 요청
-      fetch('http://localhost:8080/api/data')
-        .then(response => response.json())
-        .then(data => setData(data))
-        .catch(error => console.error('Error fetching data:', error));
-    }, []);
-  */
+    // Spring 서버의 엔드포인트에 GET 요청을 보냄
+    axios.get('http://localhost:8080/')
+      .then(response => {
+        setData(response.data); // 받은 데이터를 state에 저장
+      })
+      .catch(error => {
+        console.error('Error fetching data:', error);
+      });
+  }, []); // 빈 배열을 전달하여 컴포넌트가 마운트될 때 한 번만 실행되도록 함
+
+
   return (
     <div className="App">
       <div id ="container">

@@ -1,7 +1,7 @@
 
 
 .uploadContentBox{
-    width:60%;
+    width:80%;
     margin: 0 auto;
     display:flex;
     flex-direction: row;
@@ -9,8 +9,8 @@
 }
 
 .uploadBox{
+    padding-top:100px;
     width:50%;
-    border:1px solid black;
 
 
 }
@@ -20,6 +20,9 @@
     height:250px;
 }
 
+#업로드설명{
+    font-size:16pt;
+}
 .업로드설명{
     height:150px;
 }
@@ -28,6 +31,15 @@
 }
 
 .회색{
+    color:grey;
+}
+
+#파일선택버튼{
+    background-color: white;
+    width:90px;
+    height:35px;
+    border:1px solid lightblue;
+    border-radius: 4px;
     color:grey;
 }
 
