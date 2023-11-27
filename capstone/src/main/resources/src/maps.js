@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import { Frame, Footer } from './components/frame/frame.js';
-
+import ReactDOM from 'react-dom';
 import './maps.css';
 
-
-
+import renderLineChart from './chart.js';
 
 
 function NaverMaps() {
+
   useEffect(() => {
     const script = document.createElement('script');
     script.async = true;
@@ -50,32 +50,24 @@ function NaverMaps() {
         title: markerInfo.title,
       });
 
-      window.naver.maps.Event.addListener(marker, 'click', () => {
+
+      const infoWindow = new window.naver.maps.InfoWindow({
+        content: document.createElement('div')// 빈 div로 초기화
+      });
+
+      const openInfoWindow = () => {
+        const contentElement = document.createElement('div');
+        ReactDOM.render(renderLineChart, contentElement);
+        infoWindow.setContent(contentElement);
+        infoWindow.open(map,marker.position);
+      };
+
+      window.naver.maps.Event.addListener(marker,'click',openInfoWindow);
       // 클릭된 마커의 정보를 이용하여 원하는 동작 수행
       // /요청/marker.title 보내고 받은 데이터에 module 출력
       
-      const infoWindow = new window.naver.maps.InfoWindow({
-        anchorSkew: true
-      });
-      
-      const testData = '마커 정보';
-      infoWindow.setContent([//내부 복잡도 올리면 될듯..?
-      `<div id="modal" style="padding:10px;min-width:500px;line-height:150%;height:300px">
-      ${testData}
-      <input type="text"
-      placeholder='날짜'
-      />
-      <input type="text"
-      placeholder='시간'
-      />
-    </div>`
-      ].join('\n'));
-
-      infoWindow.open(map,marker.position);
-      
       //alert(`마커 클릭: ${marker.position},${marker.title}`);
 
-    });    
   });
 
     };
