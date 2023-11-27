@@ -7,7 +7,7 @@ import NewAccoutGeneral from './components/newAccountGeneral/newAccountGeneral.j
 import NewAccoutGov from './components/newAccountGeneral/newAccountGov.js';
 import Community from './components/community/community.js';
 import CommunityMain from './components/community/communityMain.js';
-
+import Upload from './components/upload/upload.js';
 
 import React, { useState, useEffect } from 'react';
 
@@ -30,6 +30,7 @@ import {Maps} from './maps.js';
 function App() {
 
 
+  /*
   useEffect(() => {
       // Spring Boot 서버의 API endpoint로 데이터를 요청
       fetch('http://localhost:8080/api/data')
@@ -37,7 +38,7 @@ function App() {
         .then(data => setData(data))
         .catch(error => console.error('Error fetching data:', error));
     }, []);
-  
+  */
   return (
     <div className="App">
       <div id ="container">
@@ -51,6 +52,8 @@ function App() {
                 <Route path="/community" element={<Community/>}/>
                 <Route path="/newAccountGeneral" element={<NewAccoutGeneral/>}/>
                 <Route path="/newAccountGov" element={<NewAccoutGov/>}/>
+                <Route path="/upload" element={<Upload/>}/>
+                
           </Routes>
         </Router>
         

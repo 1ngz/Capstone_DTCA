@@ -36,9 +36,9 @@ function Bars({i}){ //이걸 그냥 nav에 붙는 bars로 사용하면 TopNav에
       link2 : "/community",
     },{
       name: "데이터 업로드",
-      menu1 : "공지사항",
+      menu1 : "데이터 업로드",
       menu2 : "커뮤니티",
-      link : "/intro",
+      link : "/upload",
       link2 : "/intro",
     }
     ]
