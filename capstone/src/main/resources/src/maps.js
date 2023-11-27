@@ -3,7 +3,7 @@ import { Frame, Footer } from './components/frame/frame.js';
 import ReactDOM from 'react-dom';
 import './maps.css';
 
-import renderLineChart from './chart.js';
+import RenderChart from './components/chart/chart.js';
 
 
 function NaverMaps() {
@@ -52,12 +52,12 @@ function NaverMaps() {
 
 
       const infoWindow = new window.naver.maps.InfoWindow({
-        content: document.createElement('div')// 빈 div로 초기화
+        content: document.createElement('div')
       });
 
       const openInfoWindow = () => {
         const contentElement = document.createElement('div');
-        ReactDOM.render(renderLineChart, contentElement);
+        ReactDOM.render(<RenderChart/>, contentElement);
         infoWindow.setContent(contentElement);
         infoWindow.open(map,marker.position);
       };
@@ -69,9 +69,7 @@ function NaverMaps() {
       //alert(`마커 클릭: ${marker.position},${marker.title}`);
 
   });
-
     };
-
     document.head.appendChild(script);
   }, []);
 
